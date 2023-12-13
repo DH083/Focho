@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.reviewMapper">
+
+    <!--    리뷰 불러오기     -->
+    <select id="select" parameterType="int" resultType="ReviewDto">
+        select * from review where num = #{num}
+    </select>
+
+    <!--    가게에 맞는 리뷰 불러오기 최근날짜순     -->
+    <select id="selectRes" parameterType="int" resultType="ReviewDto">
+        select * from review where res_num = #{num}
+        order by num DESC
+    </select>
+
+    <!--    유저별로 리뷰 불러오기 최근날짜순 사용안함     -->
+    <select id="selectUser" parameterType="int" resultType="ReviewDto">
+        select * from review where user_num = #{num}
+        order by num DESC
+    </select>
+
+    <!--    작성한 리뷰 추가하기     -->
+    <insert id="insertReview" parameterType="ReviewDto">
+        insert into review (score, txt, date, user_num, res_num, user_name)
+        values (#{score}, #{txt}, now(), #{user_num}, #{res_num}, #{user_name})
+    </insert>
+
+    <!--    리뷰 삭제하기 리뷰 작성한 유저만     -->
+    <delete id="deleteReview" parameterType="map">
+        delete from review
+        where num=#{num} and user_num=#{user_num}
+    </delete>
+
+<!--    리뷰 수정?      -->
+</mapper>

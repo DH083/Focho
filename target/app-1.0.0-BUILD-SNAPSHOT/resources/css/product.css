@@ -1,0 +1,224 @@
+.con_area {
+    margin-top: 150px;
+}
+.restaurant_list {
+    width: 1200px;
+    height: auto;
+    margin: 50px auto 0;
+    padding-bottom: 50px;
+}
+.restaurant_list::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.restaurant_list_L_total {
+    width: 300px;
+    height: 500px;
+    float: left;
+}
+.restaurant_L_count {
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.restaurant_L {
+    width: 100%;
+    height: 100%;
+    background-color: #05ccc5;
+    position: absolute; 
+    top: 100%;
+    left: 0;
+}
+.restaurant_list_L1 {
+    top: 0;
+}
+
+.restaurant_R_total {
+    width: calc(100% - 358px);
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    float: right;
+}
+.restaurant_R_title {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+}
+.restaurant_R {
+    width: calc((100% - (10px * 2)) / 3);
+    height: 400px;
+    border: 1px #ddd solid;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+}
+.restaurant_R > a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.restaurant_R > a >img {
+    width: 100%;
+    height: 250px;
+    background-color: #05ccc5;
+    object-fit: cover;
+}
+.restaurant_R > a > p {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0 10px;
+    width: calc(100% - 72px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.name_border {
+    width: calc(100% - 20px);
+    height: 3px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    background-color: #05ccc5;
+}
+.restaurant_list_num {
+    width: calc(100% - 20px);
+    position: absolute;
+    display: flex;
+    padding-left: 10px;
+}
+.restaurant_list_num > img {
+    width: 20px;
+    height: 20px;
+}
+.restaurant_list_num > span {
+    margin-left: 20px;
+    font-size: 14px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.restaurant_list_place {
+    width: calc(100% - 20px);
+    display: flex;
+    position: absolute;
+    top: 340px;
+    padding-left: 10px;
+}
+.restaurant_list_place > img {
+    width: 20px;
+    height: 20px;
+}
+.restaurant_list_place > span {
+    font-size: 14px;
+    margin-left: 20px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.restaurant_list_heart {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 270px;
+}
+.restaurant_list_heart > img {
+    width: 20px;
+    height: 20px;
+}
+.restaurant_list_heart > span {
+    font-size: 14px;
+}
+.restaurant_list_hash {
+    width: calc(100% - 20px);
+    display: flex;
+    position: absolute;
+    top: 365px;
+    padding-left: 10px;
+}
+.restaurant_list_hash > span {
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width:1350px) {
+    
+    .restaurant_list{
+        width: 100%;
+    }
+    .restaurant_R {
+        width: calc((100% - 10px) / 2);
+        height: 400px;
+        border: 1px #ddd solid;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #fff;
+    }
+    .restaurant_R_total {
+        width: 915px;
+        float: none;
+    }
+   
+}
+@media  screen and (max-width:1040px) {
+    .restaurant_list_L_total{
+        display: none;
+    }
+    .restaurant_R_total{
+        width: 100%;
+    }
+    .restaurant_R {
+        width: calc((100% - (10px * 2)) / 2);
+        height: 400px;
+        border: 1px #ddd solid;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #fff;
+    }
+}
+@media screen and (min-width:280px) and (max-width:480px) {
+
+    .restaurant_R {
+        width: 100%;
+        height: 400px;
+        border: 1px #ddd solid;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #fff;
+    }
+}
+
+.jjim_img {
+    width: 30px;
+    height: 30px;
+}
+.jjim_img2 {
+    display: none;
+}
+.jjim:checked ~ .jjim_img1 {
+    display: none;
+}
+
+.jjim:checked ~ .jjim_img2 {
+    display: block;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+.restaurant_L img {
+    width: 100%;
+    height: 100%;
+}

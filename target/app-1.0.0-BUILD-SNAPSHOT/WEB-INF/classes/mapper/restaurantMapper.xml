@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.restaurantMapper">
+
+<!--    가게 하나 불러오기  -->
+    <select id="select" parameterType="int" resultType="RestaurantDto">
+        select * from restaurant where num = #{num}
+    </select>
+
+<!--    번호에 맞는 가게 정보 불러오기   -->
+    <select id="selectAll" parameterType="int" resultType="RestaurantDto">
+        select * from restaurant
+        where num=#{num}
+        order by num desc
+    </select>
+
+    <!--    태그를 가지고 있는 가게 정보 불러오기   -->
+    <select id="selectTag" parameterType="int" resultType="RestaurantDto">
+        select * from restaurant
+        where tag_num = #{tag}
+        order by rand()
+    </select>
+
+
+    <!--    타입 별로 가게 정보 불러오기   -->
+    <select id="selectType" parameterType="int" resultType="RestaurantDto">
+        select * from restaurant
+        where type_num = #{type}
+    </select>
+    <!--    로그인 후 타입 별로 가게 정보 불러오기   -->
+    <select id="selectTypeLogin" parameterType="map" resultType="RestaurantLoginDto">
+<!--        select R.*, J.user_num from-->
+<!--        select * from restaurant where type_num = #{type} R-->
+<!--        left join select * from jjim where user_num=#{user_num} J-->
+<!--        on R.num = J.res_num;-->
+
+<!--        DISTINCT 중복제거   -->
+        SELECT DISTINCT R.*, J.user_num
+        FROM restaurant R
+        LEFT JOIN jjim J ON R.num = J.res_num AND J.user_num = #{user_num}
+        WHERE R.type_num = #{type}
+    </select>
+
+    <!--    로그인 후 태그 별로 가게 정보 불러오기   -->
+    <select id="selectTagLogin" parameterType="map" resultType="RestaurantLoginDto">
+        <!--        DISTINCT 중복제거   -->
+        SELECT DISTINCT R.*, J.user_num
+        FROM restaurant R
+        LEFT JOIN jjim J ON R.num = J.res_num AND J.user_num = #{user_num}
+        WHERE R.tag_num = #{tag}
+        order by rand()
+    </select>
+
+    <!--     로그인 후 번호에 맞는 가게 정보 불러오기  -->
+    <select id="selectResLogin" parameterType="map" resultType="RestaurantLoginDto">
+        SELECT R.*, J.user_num
+        FROM restaurant R
+        LEFT JOIN jjim J ON R.num = J.res_num AND J.user_num = #{user_num}
+        WHERE R.num = #{num};
+    </select>
+
+
+<!--    태그 테이블의 줄 개수 -->
+    <select id="count" parameterType="int" resultType="int">
+        select count(*) from tag
+    </select>
+
+
+    <!--    유저별로 리뷰 불러오기 번호역순     -->
+    <select id="selectJjim" parameterType="int" resultType="RestaurantDto">
+<!--        1. restaurant 테이블에서 모든 가게 선택 R로 지정
+            2. jjim 테이블에서 받아온 num 값이 user_num과 같은 것 선택 J로 지정
+            3. R의 num과 J의 res_num이 같은 것만 불러오기   -->
+        select R.*, J.user_num from
+        (select * from restaurant) R
+        inner join (select * from jjim where user_num=#{num}) J
+        on R.num = J.res_num
+        order by J.num desc;
+        <!--        select * from jjim where user_num = #{num}-->
+        <!--        order by num-->
+    </select>
+
+
+<!--    가게 전체 영업시간 불러오기    -->
+    <select id="selectTime" parameterType="int" resultType="BusinessDto">
+        select * from business
+        where res_num = #{num}
+    </select>
+
+    <!--    리뷰 개수 증가 +1, -1-->
+    <update id="updateReviewCount" parameterType="map">
+        update restaurant
+        set rev_count=rev_count + #{count}
+        where num=#{num}
+    </update>
+
+    <!--    리뷰 점수 증가 -->
+    <update id="updateResScore" parameterType="map">
+        update restaurant
+        set rev_score= (rev_score*(rev_count-1) + #{score})/rev_count
+        where num=#{num}
+    </update>
+
+    <!--    리뷰 점수 감소 -->
+    <update id="removeResScore" parameterType="map">
+        update restaurant
+        set rev_score= (rev_score*(rev_count+1) - #{score})/rev_count
+        where num=#{num}
+    </update>
+
+    <!--    가게 오늘 영업시간 불러오기    -->
+    <select id="selectTimeToday" parameterType="map" resultType="BusinessDto">
+        select * from business
+        where res_num = #{num} and day = #{day}
+    </select>
+
+
+    <select id="selectSearchName" parameterType="String" resultType="RestaurantDto">
+        select * from restaurant
+        where name like concat('%',#{keyword},'%')
+    </select>
+
+    <select id="selectSearch" parameterType="String" resultType="RestaurantDto">
+        SELECT DISTINCT r.*
+        FROM restaurant r
+        LEFT JOIN menu m ON r.num = m.res_num
+        LEFT JOIN type t ON r.type_num = t.num
+        LEFT JOIN tag tg ON r.tag_num = tg.num
+        WHERE r.name LIKE concat('%',#{keyword},'%')
+        OR r.city LIKE concat('%',#{keyword},'%')
+        OR m.name LIKE concat('%',#{keyword},'%')
+        OR t.txt LIKE concat('%',#{keyword},'%')
+        OR tg.txt LIKE concat('%',#{keyword},'%')
+        order by rand()
+    </select>
+
+    <select id="selectSearchLogin" parameterType="map" resultType="RestaurantLoginDto">
+        SELECT DISTINCT r.*, J.user_num
+        FROM restaurant r
+        LEFT JOIN menu m ON r.num = m.res_num
+        LEFT JOIN type t ON r.type_num = t.num
+        LEFT JOIN tag tg ON r.tag_num = tg.num
+        LEFT JOIN jjim J ON R.num = J.res_num AND J.user_num = #{user_num}
+        WHERE r.name LIKE concat('%',#{keyword},'%')
+        OR r.city LIKE concat('%',#{keyword},'%')
+        OR m.name LIKE concat('%',#{keyword},'%')
+        OR t.txt LIKE concat('%',#{keyword},'%')
+        OR tg.txt LIKE concat('%',#{keyword},'%')
+        order by rand()
+    </select>
+
+
+</mapper>

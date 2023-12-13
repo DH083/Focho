@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <!-- 별칭 정하는곳: 앞으로 BoardDto 라고 하면 com.bitstudy.app.domain.Ex02_BoardDto 로 알아들음 -->
+
+<!--        <typeAlias alias="BoardDto" type="com.bitstudy.app.domain.Ex02_BoardDto" />-->
+        <typeAlias alias="UserDto" type="com.bitstudy.app.domain.UserDto" />
+        <typeAlias alias="RestaurantDto" type="com.bitstudy.app.domain.RestaurantDto" />
+        <typeAlias alias="ReviewDto" type="com.bitstudy.app.domain.ReviewDto" />
+        <typeAlias alias="TagDto" type="com.bitstudy.app.domain.TagDto" />
+        <typeAlias alias="TypeDto" type="com.bitstudy.app.domain.TypeDto" />
+        <typeAlias alias="MenuDto" type="com.bitstudy.app.domain.MenuDto" />
+        <typeAlias alias="JjimDto" type="com.bitstudy.app.domain.JjimDto" />
+        <typeAlias alias="BusinessDto" type="com.bitstudy.app.domain.BusinessDto" />
+        <typeAlias alias="RestaurantLoginDto" type="com.bitstudy.app.domain.RestaurantLoginDto" />
+    </typeAliases>
+</configuration>

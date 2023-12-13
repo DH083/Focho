@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.jjimMapper">
+
+    <!--    유저별로 찜 목록     -->
+    <select id="selectUser" parameterType="int" resultType="JjimDto">
+        select * from jjim where user_num = #{num}
+    </select>
+
+    <!--    가게 찜하기     -->
+    <insert id="insertJjim" parameterType="JjimDto">
+        insert into jjim (user_num, res_num)
+        values (#{user_num}, #{res_num})
+    </insert>
+
+    <!--    찜 삭제하기 가게 번호와 유저 번호 확인후 삭제    -->
+    <delete id="deleteJjim" parameterType="map">
+        delete from jjim
+        where res_num=#{res_num} and user_num=#{user_num}
+    </delete>
+
+<!--    &lt;!&ndash;    작성한 리뷰 추가하기     &ndash;&gt;-->
+<!--    <insert id="insertReview" parameterType="ReviewDto">-->
+<!--        insert into review (num, score, txt, date, user_num, res_num)-->
+<!--        values (#{num}, #{score}, #{txt}, now(), #{user_num}, #{res_num})-->
+<!--    </insert>-->
+
+<!--    &lt;!&ndash;    리뷰 삭제하기 리뷰 작성한 유저만     &ndash;&gt;-->
+<!--    <delete id="delete" parameterType="map">-->
+<!--        delete from review-->
+<!--        where num=#{num} and user_num=#{user_num}-->
+<!--    </delete>-->
+
+    <!--    리뷰 수정?      -->
+</mapper>

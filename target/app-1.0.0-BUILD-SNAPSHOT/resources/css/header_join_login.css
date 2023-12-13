@@ -1,0 +1,18 @@
+.header_w {
+    padding-top: 10px;
+}
+.header_logo{
+    float: none;
+    margin: 0 auto;
+}
+.search_box{
+    display: none;
+}
+.user_box{
+    display: none;
+}
+@media screen and (max-width: 1200px){
+    .header_w {
+        width: calc(100% - 50px);
+    }
+}

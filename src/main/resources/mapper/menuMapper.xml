@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.menuMapper">
+
+    <!--    가게 번호에 맞는 메뉴 불러오기   -->
+    <select id="selectMenu" parameterType="int" resultType="MenuDto">
+        select * from menu
+        where res_num=${num}
+    </select>
+</mapper>
