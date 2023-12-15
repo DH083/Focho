@@ -30,13 +30,13 @@
 
 ![Join](https://github.com/DH083/Focho/assets/147012079/9a3dc2c8-4790-4eb9-a307-e0769a737a75)
 
-❗ 공란이 있을시<br>
+<h5>❗ 공란이 있을시</h5><br>
 <img width="500" alt="Join_null" src="https://github.com/DH083/Focho/assets/147012079/8d22d95b-677c-4df8-a525-64c178180ba5">
 
-❗ 아이디, 닉네임 중복시<br>
+<h5>❗ 아이디, 닉네임 중복시</h5><br>
 <img width="500" alt="Join_overlap" src="https://github.com/DH083/Focho/assets/147012079/b8f9db96-f9da-43fb-95da-f5ab06e2b7a5">
 
-❗ 올바른 양식<br>
+<h5>❗ 올바른 양식</h5><br>
 <img width="500" alt="Join_ok" src="https://github.com/DH083/Focho/assets/147012079/cfd8924a-8ee4-4070-aab9-ce1a46564af3">
 <hr>
 <h3>✔️ 로그인</h3>
@@ -49,11 +49,11 @@
 
 ![Login](https://github.com/DH083/Focho/assets/147012079/21de8b1e-ece8-46da-8cb6-b4ef2519a292)
 
-❗ 공란이 있을시<br>
+<h5>❗ 공란이 있을시</h5><br>
 <img width="150" alt="Login_idNull" src="https://github.com/DH083/Focho/assets/147012079/c47eb424-1fe5-4306-ad23-206b651e0980"><br>
 <img width="250" alt="Login_pwNull" src="https://github.com/DH083/Focho/assets/147012079/2c7d94ab-64ad-4a3e-b1f3-5290c38f54c0">
 
-❗ DB값이 일치하지 않을시<br>
+<h5>❗ DB값이 일치하지 않을시</h5><br>
 <img width="300" alt="Login_userNull" src="https://github.com/DH083/Focho/assets/147012079/12c65581-f1e3-48db-904c-b6b15ca761b4">
 <hr>
 <h3>✔️ 메인페이지</h3>
@@ -66,11 +66,11 @@
 
 ![Main](https://github.com/DH083/Focho/assets/147012079/86144701-525c-47ff-8ad5-764a24a453d5)
 
-❗ 가게에 마우스 호버시<br>
-❗ 하트 클릭시 찜 목록에 추가 및 삭제<br>
+<h5>❗ 가게에 마우스 호버시</h5><br>
+<h5>❗ 하트 클릭시 찜 목록에 추가 및 삭제</h5><br>
 <img width="300" alt="Main_hover" src="https://github.com/DH083/Focho/assets/147012079/0d26d445-d39b-41c8-8b00-5a3c92a95b54">
 
-❗ 룰렛<br>
+<h5>❗ 룰렛</h5><br>
 <img width="300" alt="Main_룰렛" src="https://github.com/DH083/Focho/assets/147012079/5a4ed814-5d21-43c4-a959-5b7ea0b49d30">
 <hr>
 <h3>✔️ 분류페이지</h3>
@@ -92,7 +92,7 @@
 
 ![Search](https://github.com/DH083/Focho/assets/147012079/3032066d-035d-4233-b148-83c26a24b384)
 
-❗ 키워드에 해당하는 가게가 없을시<br>
+<h5>❗ 키워드에 해당하는 가게가 없을시</h5><br>
 <img width="500" alt="keyword_no" src="https://github.com/DH083/Focho/assets/147012079/1d2aa4e9-8da6-4671-acb2-fc8006a82b26">
 <hr>
 <h3>✔️ 상세페이지</h3>
@@ -106,13 +106,13 @@
 
 ![Item_top](https://github.com/DH083/Focho/assets/147012079/01d617be-2f19-4262-a5e0-c43d8f495187)
 
-❗ 영업시간 +<br>
+<h5>❗ 영업시간 +</h5><br>
 <img width="400" alt="Item_timeMore" src="https://github.com/DH083/Focho/assets/147012079/769550e3-b2ca-4651-b2d1-c8d1622a8316"><br>
 <br>
-❗ 상세주소 +<br>
+<h5>❗ 상세주소 +</h5><br>
 <img width="500" alt="Item_addMore" src="https://github.com/DH083/Focho/assets/147012079/9e7cbe10-76b7-4c62-98b0-0c2ded1f3518"><br>
 <br>
-❗ 메뉴 더보기<br>
+<h5>❗ 메뉴 더보기</h5><br>
 <img width="500" alt="Item_menuMore" src="https://github.com/DH083/Focho/assets/147012079/78294f1b-84b6-4af2-b16f-2f922c58e2a3"><br>
 <br>
 
@@ -125,10 +125,10 @@
 
 ![Item_btm](https://github.com/DH083/Focho/assets/147012079/ecef3518-dd2c-4f3e-b9d3-87682ead87db)
 
-❗ 리뷰작성칸<br>
+<h5>❗ 리뷰작성칸</h5><br>
 <img width="621" alt="Item_reviewWrite" src="https://github.com/DH083/Focho/assets/147012079/149ee7cd-98ad-4848-8330-5354c6822a78"><br>
 <br>
-❗ 작성된 리뷰가 없을시<br>
+<h5>❗ 작성된 리뷰가 없을시</h5><br>
 <img width="623" alt="Item_reviewNull" src="https://github.com/DH083/Focho/assets/147012079/73a0dbb3-45d1-4937-a84a-f3c693e13833"><br>
 <br>
 
@@ -141,20 +141,20 @@
 - 회원 수정 클릭시 회원정보수정페이지로 이동<br>
 <br>
 
-❗ 리뷰 목록<br>
+<h5>❗ 리뷰 목록</h5><br>
 ![Mypage_review](https://github.com/DH083/Focho/assets/147012079/f1bf6609-53ea-44a4-b808-88f70215877d)
 
 <br>
 
-❗ 아직 작성한 리뷰가 없을시<br>
+<h5>❗ 아직 작성한 리뷰가 없을시</h5><br>
 <img width="618" alt="Mypage_noReview" src="https://github.com/DH083/Focho/assets/147012079/f270a302-e658-4831-b7a5-2afcbf7d6eb8">
 <br>
 
-❗ 찜 목록<br>
+<h5>❗ 찜 목록</h5><br>
 ![Mypage_jjim](https://github.com/DH083/Focho/assets/147012079/1aafc7b3-db3b-4f2b-ac31-cee3fc511f52)
 
 <br>
-❗ 아직 찜한 가게가 없을시<br>
+<h5>❗ 아직 찜한 가게가 없을시</h5><br>
 
 <hr>
 <h3>✔️ 회원정보수정페이지</h3>
