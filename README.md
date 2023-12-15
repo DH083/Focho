@@ -17,9 +17,9 @@
 - 비밀번호, 이메일 형식 확인
 ![Join](https://github.com/DH083/Focho/assets/147012079/9a3dc2c8-4790-4eb9-a307-e0769a737a75)
 
-- 빈칸이 있을 떄
+- 빈칸이 있을 떄<br>
 <img width="238" alt="Join_null" src="https://github.com/DH083/Focho/assets/147012079/8d22d95b-677c-4df8-a525-64c178180ba5">
-- 아이디, 닉네임 중복시
+- 아이디, 닉네임 중복시<br>
 <img width="233" alt="Join_overlap" src="https://github.com/DH083/Focho/assets/147012079/b8f9db96-f9da-43fb-95da-f5ab06e2b7a5">
-- 올바른 양식
+- 올바른 양식<br>
 <img width="239" alt="Join_ok" src="https://github.com/DH083/Focho/assets/147012079/cfd8924a-8ee4-4070-aab9-ce1a46564af3">
