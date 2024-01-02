@@ -160,6 +160,7 @@
 
 <br>
 <h5>❗ 아직 찜한 가게가 없을시</h5><br>
+<img width="620" alt="Mypage_noJjim" src="https://github.com/DH083/Focho/assets/147012079/d0772028-ae9d-4604-9b9c-e82dc39c78f4">
 
 <hr>
 <h3>✔️ 회원정보수정페이지</h3>
