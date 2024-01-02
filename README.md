@@ -147,7 +147,7 @@
 <br>
 
 <h5>❗ 리뷰 목록</h5><br>
-![Mypage_review](https://github.com/DH083/Focho/assets/147012079/f1bf6609-53ea-44a4-b808-88f70215877d)
+![Mypage_review](https://github.com/DH083/Focho/assets/147012079/6ef30bd0-fb50-4ed4-a561-f107ac6d3b2f)
 
 <br>
 
@@ -156,7 +156,7 @@
 <br>
 
 <h5>❗ 찜 목록</h5><br>
-![Mypage_jjim](https://github.com/DH083/Focho/assets/147012079/1aafc7b3-db3b-4f2b-ac31-cee3fc511f52)
+![Mypage_jjim](https://github.com/DH083/Focho/assets/147012079/52a73ba1-3bee-44f5-805c-737dfe4490e5)
 
 <br>
 <h5>❗ 아직 찜한 가게가 없을시</h5><br>
