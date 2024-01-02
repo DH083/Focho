@@ -71,7 +71,7 @@
 
 ![Main](https://github.com/DH083/Focho/assets/147012079/86144701-525c-47ff-8ad5-764a24a453d5)
 
-<h5>❗ 가게에 마우스 호버시</h5><br>
+<h5>❗ 가게에 마우스 호버시</h5>
 <h5>❗ 하트 클릭시 찜 목록에 추가 및 삭제</h5><br>
 <img width="300" alt="Main_hover" src="https://github.com/DH083/Focho/assets/147012079/0d26d445-d39b-41c8-8b00-5a3c92a95b54">
 
